@@ -89,6 +89,10 @@ body{
     cursor: pointer;
     font-size: 20px;
 }
+#back-signin:hover{
+    transform: scale(1.25);
+    transition: 0.5s;
+}
 .logo-form {
     text-align: center;
     margin-bottom: 20px;
@@ -155,6 +159,8 @@ label {
 
 .btn-registrar:hover {
     background-color: #81A649;
+    transform: scale(1.025);
+    transition: 0.5s;
 }
 #inicio-sesion-signin{
     margin-top: 0;
@@ -166,6 +172,7 @@ label {
     display: block;
     text-align: center;
     background-color: #A2D15C;
+    font-size: 1em;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid black;
@@ -174,6 +181,8 @@ label {
 }
 .btn-iniciar:hover{
     background-color: #81A649;
+    transform: scale(1.025);
+    transition: 0.5s;
 }
 
 .login-options p {
@@ -198,6 +207,10 @@ label {
     width: 40px;
     height: 40px;
     cursor: pointer;
+}
+.social-icon:hover{
+    transform: scale(1.25);
+    transition: 0.5s;
 }
 .linea-group{
     display: flex;
@@ -323,6 +336,7 @@ nav ul li a:hover {
 }
 /* recomendaciones */
 .recomendaciones .subtitulo{
+    height: 40px;
     text-align: center;
     font-size: 24px;
     color: white;
@@ -418,6 +432,7 @@ nav ul li a:hover {
 }
 
 .botones-puntos{
+    height: 40px;
     display: flex;
     justify-content: center;
     background-color: #5C432E;
@@ -438,6 +453,13 @@ nav ul li a:hover {
     cursor: pointer;
     transition: 0.5s;
 }
+.circulo.uno:hover,.circulo.dos:hover,.circulo.tres:hover{
+    transform: scale(1.15);
+    transition: 0.5s;
+}
+
+
+
 /* carrusel */
 .carrusel{
     position: relative;
@@ -486,6 +508,18 @@ nav ul li a:hover {
 }
 .der{
     right: 0px;
+    transition: 0.3s;
+}
+.der:hover{
+    transform: scale(1.1) translateX(5px);
+    transition: 0.5s;
+}
+.izq{
+    transition: 0.3s;
+}
+.izq:hover{
+    transform: scale(1.1) translateX(-5px);
+    transition: 0.5s;
 }
 
 
@@ -501,6 +535,11 @@ nav ul li a:hover {
     overflow: hidden;
     background-color: rgb(255, 255, 255);
     z-index: 1;
+    transition: 0.5s;
+}
+.card:hover{
+    transform: scale(1.1);
+    transition:0.75s;
 }
 
 .image img {
