@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniJuegos Kiwi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="izquierda">
+            <i id="icon" class="bi bi-list" class="menu-icon" onclick="verMenu()"></i>
+            <div class="logo" id="icon">
+                <img src="juegos/kiwi.png" alt="Kiwi Logo">
+            </div>    
+        </div>
+        <h1>Kiwi Games</h1>
+        <div class="derecha">
+            <i id="icon" class="bi bi-cart"></i>
+            <i id="icon" class="bi bi-person-circle" onclick="verPerfil()"></i>
+        </div>
+        
+        
+        
+        <nav id="menu">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Juegos</a></li>
+                <li><a href="#">Categorías</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <nav id="perfil">
+            <ul>
+                <li><a href="#" id="cerrar-sesion">Cerrar sesion</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Carga pagina -->
+    <div class="carga-pagina">
+        <div class="barra-carga">
+            <h1 class="porcentaje"></h1>
+            <img class="kiwi-carga" src="juegos/kiwi.png" alt="kiwi">
+            <div class="barra-porcentaje"></div>
+        </div>
+    </div>
+
+    <div id="login">
+        <div class="container1">
+            <div class="logo-form">
+                <img src="juegos/kiwi.png" alt="Kiwi Games">
+                <h1>Kiwi Games</h1>
+                <img src="juegos/kiwi90g.png" alt="Kiwi Games">
+            </div>
+            <form class="registro-form">
+                <div class="input-group">
+                    <div>
+                        <label for="nombre">Nombre *</label>
+                        <input type="text" id="nombre" placeholder="nombre" >
+                    </div>
+                    <div>
+                        <label for="apellido">Apellido *</label>
+                        <input type="text" id="apellido" placeholder="apellido" >
+                    </div>
+                </div>
+    
+                <label for="nickname">Nickname</label>
+                <input type="text" id="nickname" placeholder="ejemplo123">
+    
+                <label for="nacimiento">Nacimiento</label>
+                <input type="date" id="nacimiento" value="2000-12-31">
+    
+                <label for="mail">Mail *</label>
+                <input type="email" id="mail" placeholder="nombre@ejemplo.com" >
+    
+                <label for="contrasena">Contraseña *</label>
+                <input type="password" id="contrasena" placeholder="**********" >
+    
+                <label for="repetir-contrasena">Repetir contraseña *</label>
+                <input type="password" id="repetir-contrasena" placeholder="**********" >
+    
+                <div class="recaptcha">
+                    <input type="checkbox" id="recaptcha" required>
+                    <label for="recaptcha">I'm Not a Robot</label>
+                </div>
+    
+                <button type="submit" class="btn-registrar">Registrar</button>
+    
+                <div class="login-options">
+                    <div class="linea-group">
+                        <div class="linea"></div>
+                        <p>¿Ya tengo una cuenta?</p>
+                        <div class="linea"></div>
+                    </div>
+                    
+                    <div class="btn-iniciar" id="inicio-sesion-signup">Iniciar sesión</div>
+                </div>
+                <div class="linea-group">
+                    <div class="linea2"></div>
+                    <p class="or">O ingresar con:</p>
+                    <div class="linea2"></div>
+                </div>
+                <div class="social-login">
+                    <img src="juegos/facebook.png" alt="Facebook" class="social-icon" onclick="cerrarLogin()">
+                    <img src="juegos/google.png" alt="Google" class="social-icon" onclick="cerrarLogin()">
+                </div>
+            </form>
+        </div>
+
+        <div class="container2">
+            <i class="bi bi-arrow-90deg-left" id="back-signin"></i>
+            <div class="logo-form">
+                <img src="juegos/kiwi.png" alt="Kiwi Games">
+                <h1>Kiwi Games</h1>
+                <img src="juegos/kiwi90g.png" alt="Kiwi Games">
+            </div>
+            <form class="registro-form">
+    
+                <label for="mail">Mail *</label>
+                <input type="email" id="mail" placeholder="nombre@ejemplo.com" >
+    
+                <label for="contrasena">Contraseña *</label>
+                <input type="password" id="contrasena" placeholder="**********" >
+
+                <button type="submit" class="btn-iniciar" id="inicio-sesion-signin">Iniciar sesión</button>
+
+                <div class="linea-group">
+                    <div class="linea2"></div>
+                    <p class="or">O ingresar con:</p>
+                    <div class="linea2"></div>
+                </div>
+                <div class="social-login">
+                    <img src="juegos/facebook.png" alt="Facebook" class="social-icon" onclick="cerrarLogin()">
+                    <img src="juegos/google.png" alt="Google" class="social-icon" onclick="cerrarLogin()">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Recomendaciones -->
+    <div class="recomendaciones">
+        <h3 class="subtitulo">Recomendados para tí</h3>
+        <div class="cards-recomendaciones">
+            <div class="card-grande">
+                <img src="juegos/4enlinea.bmp" alt="4enlinea">
+                <div class="detalles">
+                    <h3>4 en linea fruit</h3>
+                    <button class="boton-jugar">Jugar</button>
+                    <div class="precio">
+                        <div class="icons">
+                            
+                            <i class="bi bi-info-circle"></i>
+                        </div>
+                        <span class="gratis">Gratis</span>
+                    </div>
+        
+                </div>
+            </div>
+            <div class="card-grande">
+                <img src="juegos/fireboyywatergirl1.avif" alt="fireboyywatergirl">
+                <div class="detalles">
+                    
+                    <h3>Fireboy and Watergirl in The Forest Temple</h3>
+                    <button class="boton-jugar">Jugar</button>
+                    <div class="precio">
+                        <div class="icons">
+                            
+                            <i class="bi bi-info-circle"></i>
+                        </div>
+                        <span class="gratis">Gratis</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-grande">
+                <img src="juegos/tlou.avif" alt="tlou">
+                <div class="detalles">
+                    <h3>The Last Of Us</h3>
+                    <button class="boton-jugar">Jugar</button>
+                    <div class="precio">
+                        <div class="icons">
+                            <i class="bi bi-check-lg"></i>
+                            <i class="bi bi-info-circle"></i>
+                        </div>
+                        <span class="comprado">$49.90</span>
+                    </div>
+        
+                </div>
+            </div>
+            <div class="card-grande">
+                <img src="juegos/bad-icream-3.jpg" alt="badicecream3">
+                <div class="detalles">
+                    <h3>Bad Ice-Cream 3</h3>
+                    <button class="boton-jugar">Jugar</button>
+                    <div class="precio">
+                        <div class="icons">
+                            
+                            <i class="bi bi-info-circle"></i>
+                        </div>
+                        <span class="gratis">Gratis</span>
+                    </div>
+        
+                </div>
+            </div>
+            <div class="card-grande">
+                <img src="juegos/minecraft.avif" alt="minecraft">
+                <div class="detalles">
+                    <h3>Minecraft</h3>
+                    <button class="boton-jugar">Jugar</button>
+                    <div class="precio">
+                        <div class="icons">
+                            <i class="bi bi-cart"></i>
+                            <i class="bi bi-info-circle"></i>
+                        </div>
+                        <span>$27.00</span>
+                    </div>
+        
+                </div>
+            </div>
+            <div class="card-grande">
+                <img src="juegos/pacman.webp" alt="pacman">
+                <div class="detalles">
+                    <h3>Pacman</h3>
+                    <button class="boton-jugar">Jugar</button>
+                    <div class="precio">
+                        <div class="icons">
+                            
+                            <i class="bi bi-info-circle"></i>
+                        </div>
+                        <span class="gratis">Gratis</span>
+                    </div>
+        
+                </div>
+            </div>
+        </div>    
+        <div class="botones-puntos">
+            <div class="circulo uno" ></div>
+            <div class="circulo dos" ></div>
+            <div class="circulo tres" ></div>
+        </div>
+    </div>
+    
+    <!-- Carrusel -->
+    <div>
+        <div class="categoria">
+            <h2>Populares</h2>
+        </div>
+        <div class="carrusel">
+            <!-- bton izq -->
+            <div class="boton-deslizar izq" onclick="prevCard()">
+                <i class="bi bi-chevron-compact-left"></i>
+            </div>
+            <!-- Cards -->
+            <div class="carrusel-cards">
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/4enlinea.bmp" alt="4enlinea">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>4 en linea fruit</h3>
+                            <div class="icons">
+                                
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span class="gratis">Gratis</span>
+                            <button class="boton-jugar">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/badicecream.webp" alt="4enlinea">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>Bad Ice-Cream</h3>
+                            <div class="icons">
+                                
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span class="gratis">Gratis</span>
+                            <button class="boton-jugar">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/fireboyywatergirl1.avif" alt="fireboyywatergirl">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>Fireboy and Watergirl in The Forest Temple</h3>
+                            <div class="icons">
+                                
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span class="gratis">Gratis</span>
+                            <button class="boton-jugar">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/amongus.jpg" alt="4enlinea">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>Among Us</h3>
+                            <div class="icons">
+                                <i class="bi bi-check-lg"></i>
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span class="comprado">$1.99</span>
+                            <button class="boton-jugar">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/monopoly.jpg" alt="monopoly">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>Monopoly</h3>
+                            <div class="icons">
+                                <i class="bi bi-cart"></i>
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span>$4.99</span>
+                            <button class="boton-jugar bloqueado">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/thegameoflife.webp" alt="thegameoflife">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>The Game Of Life</h3>
+                            <div class="icons">
+                                <i class="bi bi-cart"></i>
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span>$3.50</span>
+                            <button class="boton-jugar bloqueado">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/badicecream2.webp" alt="badicecream2">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>Bad Ice-Cream 2</h3>
+                            <div class="icons">
+                                
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span class="gratis">Gratis</span>
+                            <button class="boton-jugar">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/super mario 2.png" alt="4enlinea">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>Super Mario 2</h3>
+                            <div class="icons">
+                                <i class="bi bi-check-lg"></i>
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span class="comprado">$1.39</span>
+                            <button class="boton-jugar">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/fireboyywatergirl2.avif" alt="fyw2">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>Fireboy And Watergirl 2</h3>
+                            <div class="icons">
+                                
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span class="gratis">Gratis</span>
+                            <button class="boton-jugar">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/tetris.webp" alt="tetris">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>Tetris</h3>
+                            <div class="icons">
+                                
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span class="gratis">Gratis</span>
+                            <button class="boton-jugar">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/slitherio.avif" alt="slitherio">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>Slither io</h3>
+                            <div class="icons">
+                                
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span class="gratis">Gratis</span>
+                            <button class="boton-jugar">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/super mario 3.jpg" alt="supermario3">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>Super Mario 3</h3>
+                            <div class="icons">
+                                
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span class="gratis">Gratis</span>
+                            <button class="boton-jugar">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/agario.avif" alt="agario">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>Agario</h3>
+                            <div class="icons">
+                                
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span class="gratis">Gratis</span>
+                            <button class="boton-jugar">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- bton der -->
+            <div class="boton-deslizar der" onclick="nextCard()">
+                <i class="bi bi-chevron-compact-right"></i>
+            </div>
+
+        </div>
+    </div>
+    
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 MiniJuegos Kiwi. Todos los derechos reservados.</p>
+            <p>Síguenos en:</p>
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+   
+    
+    <script src="js/carrusel.js"></script>
+    <script src="js/recomendaciones.js"></script>   
+    <script src="js/login.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
