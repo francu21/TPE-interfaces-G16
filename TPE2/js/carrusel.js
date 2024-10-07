@@ -1,7 +1,7 @@
 let actualIndex = 0; // Índice de la primera card visible
 const cards = document.querySelectorAll('.carrusel-cards .card'); // Todas las cards
 const totalCards = cards.length; // Total de cards
-const cardWidth = document.querySelector('.card').clientWidth+20; // Ancho de cada card en px
+const cardWidth = document.querySelector('.card').clientWidth+20+2; // Ancho de cada card en px
 const carruselWidth = document.querySelector('.carrusel').clientWidth;
 const cardsVisibles = carruselWidth / cardWidth;
 document.querySelector('.izq').style.display = "none";
@@ -24,7 +24,7 @@ function showCard(index) {
     }
     
     // Mueve las cards hacia la izquierda o derecha
-    const movimiento = -actualIndex * cardWidth-10;
+    const movimiento = -actualIndex * cardWidth;
     document.querySelector('.carrusel-cards').style.transform = "translate("+movimiento+"px,0)";
 }
 

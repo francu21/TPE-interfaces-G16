@@ -57,7 +57,7 @@
                 <h1>Kiwi Games</h1>
                 <img src="juegos/kiwi90g.png" alt="Kiwi Games">
             </div>
-            <form class="registro-form">
+            <form class="registro-form signup">
                 <div class="input-group">
                     <div>
                         <label for="nombre">Nombre *</label>
@@ -69,7 +69,7 @@
                     </div>
                 </div>
     
-                <label for="nickname">Nickname</label>
+                <label for="nickname">Nickname *</label>
                 <input type="text" id="nickname" placeholder="ejemplo123">
     
                 <label for="nacimiento">Nacimiento</label>
@@ -79,16 +79,19 @@
                 <input type="email" id="mail" placeholder="nombre@ejemplo.com" >
     
                 <label for="contrasena">Contraseña *</label>
-                <input type="password" id="contrasena" placeholder="**********" >
+                <input type="password" id="contrasenia" placeholder="password" >
     
                 <label for="repetir-contrasena">Repetir contraseña *</label>
-                <input type="password" id="repetir-contrasena" placeholder="**********" >
+                <input type="password" id="repetir-contrasenia" placeholder="password" >
     
                 <div class="recaptcha">
-                    <input type="checkbox" id="recaptcha" required>
+                    <input type="checkbox" id="recaptcha">
                     <label for="recaptcha">I'm Not a Robot</label>
                 </div>
-    
+
+                <span id="error-contrasenia">-Las contraseñas no coinciden</span>
+                <span id="error-recaptcha">-Debe validar que no es un robot</span>
+                <span id="error-campovacio">-Debe completar todos los campos</span>
                 <button type="submit" class="btn-registrar">Registrar</button>
     
                 <div class="login-options">
@@ -106,8 +109,8 @@
                     <div class="linea2"></div>
                 </div>
                 <div class="social-login">
-                    <img src="juegos/facebook.png" alt="Facebook" class="social-icon" onclick="cerrarLogin()">
-                    <img src="juegos/google.png" alt="Google" class="social-icon" onclick="cerrarLogin()">
+                    <img src="juegos/facebook.png" alt="Facebook" class="social-icon" onclick="verConfirmacion()">
+                    <img src="juegos/google.png" alt="Google" class="social-icon" onclick="verConfirmacion()">
                 </div>
             </form>
         </div>
@@ -119,14 +122,18 @@
                 <h1>Kiwi Games</h1>
                 <img src="juegos/kiwi90g.png" alt="Kiwi Games">
             </div>
-            <form class="registro-form">
+            <form class="registro-form signin">
     
                 <label for="mail">Mail *</label>
-                <input type="email" id="mail" placeholder="nombre@ejemplo.com" >
+                <input type="email" id="mail2" placeholder="nombre@ejemplo.com" >
     
                 <label for="contrasena">Contraseña *</label>
-                <input type="password" id="contrasena" placeholder="**********" >
+                <input type="password" id="contrasenia2" placeholder="**********" >
 
+                
+                <span id="error-coincidencia">-El usuario no existe</span>
+                <span id="contrasenia-incorrecta">-Contraseña incorrecta</span>
+                <span id="error-campovacio2">-Debe completar los campos</span>
                 <button type="submit" class="btn-iniciar" id="inicio-sesion-signin">Iniciar sesión</button>
 
                 <div class="linea-group">
@@ -135,10 +142,25 @@
                     <div class="linea2"></div>
                 </div>
                 <div class="social-login">
-                    <img src="juegos/facebook.png" alt="Facebook" class="social-icon" onclick="cerrarLogin()">
-                    <img src="juegos/google.png" alt="Google" class="social-icon" onclick="cerrarLogin()">
+                    <img src="juegos/facebook.png" alt="Facebook" class="social-icon" onclick="verConfirmacion()">
+                    <img src="juegos/google.png" alt="Google" class="social-icon" onclick="verConfirmacion()">
                 </div>
             </form>
+        </div>
+
+        <div class="container3">
+            <div class="logo-form">
+                <img src="juegos/kiwi.png" alt="Kiwi Games">
+                <h1>Kiwi Games</h1>
+                <img src="juegos/kiwi90g.png" alt="Kiwi Games">
+            </div>
+            <div class="registro-form">
+    
+                <h2>¡Ingresaste correctamente!</h2>
+
+                <button class="btn-iniciar" id="a-jugar">A jugar</button>
+
+            </div>
         </div>
     </div>
     
@@ -150,7 +172,7 @@
                 <img src="juegos/4enlinea.bmp" alt="4enlinea">
                 <div class="detalles">
                     <h3>4 en linea fruit</h3>
-                    <button class="boton-jugar">Jugar</button>
+                    <button class="boton-jugar" onclick="jugar4enlinea()">Jugar</button>
                     <div class="precio">
                         <div class="icons">
                             
@@ -270,7 +292,7 @@
                         </div>
                         <div class="precio">
                             <span class="gratis">Gratis</span>
-                            <button class="boton-jugar">Jugar</button>
+                            <button class="boton-jugar" onclick="jugar4enlinea()">Jugar</button>
                         </div>
                     </div>
                 </div>

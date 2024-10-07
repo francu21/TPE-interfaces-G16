@@ -36,5 +36,9 @@ function verPerfil() {
     }
 }
 
+function jugar4enlinea(){
+    window.location.href = "4enlinea.html";
+}
+
 
 
