@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MiniJuegos Kiwi</title>
+    <title>Kiwi Games</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Saira:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <!-- Header -->
     <header>
         <div class="izquierda">
-            <i id="icon" class="bi bi-list" class="menu-icon" onclick="verMenu()"></i>
+            <i id="icon" class="bi bi-list"  onclick="verMenu()"></i>
             <div class="logo" id="icon">
                 <img src="juegos/kiwi.png" alt="Kiwi Logo">
             </div>    
@@ -32,15 +31,431 @@
                 <li><a href="#">Juegos</a></li>
                 <li><a href="#">Categorías</a></li>
                 <li><a href="#">Contacto</a></li>
+                <li><a href="#" class="carrito-mobile">Carrito</a></li>
+                <li><a href="#" class="user-mobile" id="cerrar-sesion">cerrar sesion</a></li>
             </ul>
         </nav>
 
         <nav id="perfil">
             <ul>
-                <li><a href="#" id="cerrar-sesion">Cerrar sesion</a></li>
+                <li id="usuario">
+                    <i class="bi bi-person-circle"></i>
+                    <h2>admin</h2>
+                </li>
+                <li><a href="#">Configuracion</a></li>
+                <li><a href="#" id="cerrar-sesion" onclick="verSignup()">Cerrar sesion</a></li>
             </ul>
         </nav>
     </header>
+
+    <div id="juego">
+        <a href="index.html">
+            <i class="bi bi-arrow-90deg-left"></i>
+            </a>
+        <div id="breadcrumb">
+            <img src="juegos/4enlinea.bmp" alt="4enlinea">
+            <div id="titulo-juego">
+                <h2>4 en linea fruit</h2>
+                <p><span>Juegos</span> / <span>Gratis</span> / <span>Estrategia</span> / <span>4 en linea fruit</span></p>
+            </div>
+        </div>
+        <div id="img-juego">
+            <img src="juegos/4enlinea.bmp" alt="4enlinea">
+            <div id="opciones">
+                <div id="share">
+                    <i id="boton-share" class="bi bi-share-fill"></i>
+                    <div class="share-iconos">
+                        <img src="juegos/facebook.png" alt="">
+                        <img src="juegos/X.png" alt="">
+                        <img src="juegos/correo.png" alt="">
+                        <img src="juegos/ig.png" alt="">
+                    </div>
+                </div> 
+                <div>
+                <i class="bi bi-arrows-fullscreen"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="descripcion-juego">
+        <div class="instrucciones">
+            <div>
+                <h2>Instrucciones</h2>
+                <p>El juego “4 en línea fruit” es un juego de estrategia para dos jugadores. Aquí tienes las instrucciones básicas:</p>
+                <p>1 - Objetivo del juego: El objetivo es ser el primero en alinear cuatro frutas en una fila, ya sea horizontal, vertical o diagonalmente.</p>
+                <p>2 - Preparación: El tablero es una rejilla vertical de 7 columnas y 6 filas. Cada jugador elige un tipo de fruta.</p>
+                <p>3 - Cómo jugar:
+                    Los jugadores se turnan para dejar caer una fruta en una de las columnas del tablero.
+                    La fruta caerá hasta la posición más baja disponible en esa columna.
+                    El primer jugador en alinear cuatro frutas de su tipo en una fila gana la partida.</p>
+                <p>4 - Estrategia: Además de intentar formar una fila de cuatro frutas, es importante bloquear los intentos del oponente de hacer lo mismo.</p>
+                <p>5 - Fin del juego: El juego termina cuando un jugador consigue alinear cuatro frutas o cuando el tablero se llena sin que nadie haya ganado, resultando en un empate.</p>
+            </div>  
+            <div id="como-jugar">
+                <h2>Como jugar:</h2> 
+                <video width="330" autoplay loop>
+                    <source src="juegos/fichas/videodeljuego.mp4" type="video/mp4">
+                 </video>   
+            </div>
+        </div>
+        <div class="sobre-el-juego">
+            <div>
+                <h2>Sobre el juego</h2>
+                <p>- 4 en linea fruit es un juego basado en el clasico “4 en linea”, 
+                    el cual es un juego de mesa para dos jugadores, en el que se introducen fichas en un tablero vertical con el objetivo de alinear cuatro consecutivas de un mismo color. 
+                    Fue creado en 1974 por Ned Strongin y Howard Wexler para Milton Bradley Company.
+                </p>
+                <p>- Desarrollado por Kiwi games.</p>
+                <p>- 4 en linea fruit es un juego de navegador web.</p>
+            </div>
+            <div id="sobre-el-juego-img">
+                <h2>Fichas seleccionables:</h2>
+                <div class="img-fichas">
+                    <img src="juegos/fichas/banana.jpg" >
+                    <img src="juegos/fichas/png-clipart-kiwifruit-kiwi-fruit-s-cartoon-fruit.png">
+                    <img src="juegos/fichas/manzana.png" >
+                    <img src="juegos/fichas/ccbb46b60566f40a0026dd7eb3817ae6.jpg">
+                    <img src="juegos/fichas/png-clipart-graphics-drawing-lemon-slice-orange-citrus-thumbnail.png">
+                    <img src="juegos/fichas/png-clipart-orange-slice-lemon-orange-food-orange.png" >
+                    <img src="juegos/fichas/pngtree-round-watermelon-png-image_13518018.png">
+                    <img src="juegos/fichas/durazno.png">
+                    <img src="juegos/fichas/frutilla.png" >
+                </div>
+                <div>
+                    <i class="bi bi-arrow-left" id="fichas-izq"></i>
+                    <i class="bi bi-arrow-right" id="fichas-der"></i>
+                </div>
+            </div>
+            
+
+        </div>
+    </div>
+
+    <!-- Carrusel -->
+    <div>
+        <div class="categoria">
+            <h2>Similares</h2>
+        </div>
+        <div class="carrusel">
+            <!-- bton izq -->
+            <div class="boton-deslizar izq" onclick="prevCard()">
+                <i class="bi bi-chevron-compact-left"></i>
+            </div>
+            <!-- Cards -->
+            <div class="carrusel-cards">
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/4enlinea.bmp" alt="4enlinea">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>4 en linea fruit</h3>
+                            <div class="icons">
+                                
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span class="gratis">Gratis</span>
+                            <button class="boton-jugar" onclick="jugar4enlinea()">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/badicecream.webp" alt="4enlinea">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>Bad Ice-Cream</h3>
+                            <div class="icons">
+                                
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span class="gratis">Gratis</span>
+                            <button class="boton-jugar">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/fireboyywatergirl1.avif" alt="fireboyywatergirl">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>Fireboy and Watergirl in The Forest Temple</h3>
+                            <div class="icons">
+                                
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span class="gratis">Gratis</span>
+                            <button class="boton-jugar">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/amongus.jpg" alt="4enlinea">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>Among Us</h3>
+                            <div class="icons">
+                                <i class="bi bi-check-lg"></i>
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span class="comprado">$1.99</span>
+                            <button class="boton-jugar">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/monopoly.jpg" alt="monopoly">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>Monopoly</h3>
+                            <div class="icons">
+                                <i class="bi bi-cart"></i>
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span>$4.99</span>
+                            <button class="boton-jugar bloqueado">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/thegameoflife.webp" alt="thegameoflife">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>The Game Of Life</h3>
+                            <div class="icons">
+                                <i class="bi bi-cart"></i>
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span>$3.50</span>
+                            <button class="boton-jugar bloqueado">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/badicecream2.webp" alt="badicecream2">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>Bad Ice-Cream 2</h3>
+                            <div class="icons">
+                                
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span class="gratis">Gratis</span>
+                            <button class="boton-jugar">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/super mario 2.png" alt="4enlinea">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>Super Mario 2</h3>
+                            <div class="icons">
+                                <i class="bi bi-check-lg"></i>
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span class="comprado">$1.39</span>
+                            <button class="boton-jugar">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/fireboyywatergirl2.avif" alt="fyw2">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>Fireboy And Watergirl 2</h3>
+                            <div class="icons">
+                                
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span class="gratis">Gratis</span>
+                            <button class="boton-jugar">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/tetris.webp" alt="tetris">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>Tetris</h3>
+                            <div class="icons">
+                                
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span class="gratis">Gratis</span>
+                            <button class="boton-jugar">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/slitherio.avif" alt="slitherio">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>Slither io</h3>
+                            <div class="icons">
+                                
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span class="gratis">Gratis</span>
+                            <button class="boton-jugar">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/super mario 3.jpg" alt="supermario3">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>Super Mario 3</h3>
+                            <div class="icons">
+                                
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span class="gratis">Gratis</span>
+                            <button class="boton-jugar">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="juegos/agario.avif" alt="agario">
+                    </div>
+                    <div class="detalles">
+                        <div class="text">
+                            <h3>Agario</h3>
+                            <div class="icons">
+                                
+                                <i class="bi bi-info-circle"></i>
+                            </div>
+                        </div>
+                        <div class="precio">
+                            <span class="gratis">Gratis</span>
+                            <button class="boton-jugar">Jugar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- bton der -->
+            <div class="boton-deslizar der" onclick="nextCard()">
+                <i class="bi bi-chevron-compact-right"></i>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="caja-comentarios">
+        <label for="">¿Que te parecio el juego?</label>
+        <div id="comentar">
+            <input type="text" placeholder="dejanos tu opinion...">
+            <div id="boton-comentar">
+                <h2>Comentar</h2>
+            </div>
+        </div>
+        <div id="comentarios">
+            <div class="comentario">
+                <i class="bi bi-person-circle"></i>
+                <div>
+                    <h4>francu21</h3>
+                    <p>Muy divertido!</p>
+                </div>
+            </div>
+            <div class="comentario">
+                <i class="bi bi-person-circle"></i>
+                <div>
+                    <h4>user431181</h3>
+                    <p>La tematica es muy original</p>
+                </div>
+            </div>
+            <div class="comentario">
+                <i class="bi bi-person-circle"></i>
+                <div>
+                    <h4>maxi_gamer</h3>
+                    <p>no me gusto :c</p>
+                </div>
+            </div>
+            <div class="comentario">
+                <i class="bi bi-person-circle"></i>
+                <div>
+                    <h4>Jose97</h3>
+                    <p>Exelente version del clasico 4 en linea. Muy bueno para jugar con amigos. </p>
+                </div>
+            </div>
+            <div class="comentario">
+                <i class="bi bi-person-circle"></i>
+                <div>
+                    <h4>Tomas205</h3>
+                    <p>Creo que deberian agregar mas tipos de fichas. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="logo-form">
+                <img src="juegos/kiwi.png" alt="Kiwi Games">
+                <h2>Sobre Kiwi Games</h2>
+                <img src="juegos/kiwi90g.png" alt="Kiwi Games">
+            </div>
+            <p>¡Olvídate del aburrimiento en Kiwi Games! La mayor selección de juegos está aquí, para que lleves la diversión al siguiente nivel. Juega online y sin preocupaciones: puedes jugar a todos nuestros juegos sin descargar.</p>
+            <ul>
+                <h3>Algunas Categorias</h3>
+                <li>Accion</li>
+                <li>2 jugadores</li>
+                <li>Estrategia</li>
+            </ul>
+            <p>&copy; 2024 MiniJuegos Kiwi. Todos los derechos reservados.</p>
+            <p>Síguenos en:</p>
+            <div class="social-media">
+                <i><img class="social-icon" src="juegos/facebook.png" alt=""></i>
+                <i><img class="social-icon" src="juegos/X.png" alt=""></i>
+                <i><img class="social-icon" src="juegos/ig.png" alt=""></i>
+            </div>
+        </div>
+    </footer>
 
     <!-- Carga pagina -->
     <div class="carga-pagina">
@@ -50,8 +465,128 @@
             <div class="barra-porcentaje"></div>
         </div>
     </div>
+    
 
-    <script src="js/recomendaciones.js"></script>   
+    <!-- login -->
+    <div id="login">
+        <div class="container1">
+            <div class="logo-form">
+                <img src="juegos/kiwi.png" alt="Kiwi Games">
+                <h1>Kiwi Games</h1>
+                <img src="juegos/kiwi90g.png" alt="Kiwi Games">
+            </div>
+            <form class="registro-form signup">
+                <div class="input-group">
+                    <div>
+                        <label for="nombre">Nombre *</label>
+                        <input type="text" id="nombre" placeholder="nombre" >
+                    </div>
+                    <div>
+                        <label for="apellido">Apellido *</label>
+                        <input type="text" id="apellido" placeholder="apellido" >
+                    </div>
+                </div>
+     
+                <label for="nickname">Nickname *</label>
+                <input type="text" id="nickname" placeholder="ejemplo123">
+    
+                <label for="nacimiento">Nacimiento</label>
+                <input type="date" id="nacimiento" value="2000-12-31">
+    
+                <label for="mail">E-Mail *</label>
+                <input type="email" id="mail" placeholder="nombre@ejemplo.com" >
+    
+                <label for="contrasenia">Contraseña *</label>
+                <input type="password" id="contrasenia" placeholder="password" >
+    
+                <label for="repetir-contrasenia">Repetir contraseña *</label>
+                <input type="password" id="repetir-contrasenia" placeholder="password" >
+    
+                <div class="recaptcha">
+                    <div>
+                        <input type="checkbox" id="recaptcha">
+                        <label for="recaptcha">I'm Not a Robot</label>
+                    </div>
+                    <img src="juegos/RecaptchaLogo.webp" alt="">
+                </div>
+
+                <span id="error-contrasenia">-Las contraseñas no coinciden</span>
+                <span id="error-recaptcha">-Debe validar que no es un robot</span>
+                <span id="error-campovacio">-Debe completar todos los campos</span>
+                <button type="submit" class="btn-registrar">Registrar</button>
+    
+                <div class="login-options">
+                    <div class="linea-group">
+                        <div class="linea"></div>
+                        <p>¿Ya tengo una cuenta?</p>
+                        <div class="linea"></div>
+                    </div>
+                    
+                    <div class="btn-iniciar" id="inicio-sesion-signup">Iniciar sesión</div>
+                </div>
+                <div class="linea-group">
+                    <div class="linea2"></div>
+                    <p class="or">O ingresar con:</p>
+                    <div class="linea2"></div>
+                </div>
+                <div class="social-login">
+                    <img src="juegos/facebook.png" alt="Facebook" class="social-icon" onclick="verConfirmacion()">
+                    <img src="juegos/google.png" alt="Google" class="social-icon" onclick="verConfirmacion()">
+                </div>
+            </form>
+        </div>
+
+        <div class="container2">
+            <i class="bi bi-arrow-90deg-left" id="back-signin"></i>
+            <div class="logo-form">
+                <img src="juegos/kiwi.png" alt="Kiwi Games">
+                <h1>Kiwi Games</h1>
+                <img src="juegos/kiwi90g.png" alt="Kiwi Games">
+            </div>
+            <form class="registro-form signin">
+    
+                <label for="mail2">E-Mail *</label>
+                <input type="email" id="mail2" placeholder="nombre@ejemplo.com" >
+    
+                <label for="contrasenia2">Contraseña *</label>
+                <input type="password" id="contrasenia2" placeholder="password" >
+
+                
+                <span id="error-coincidencia">-El usuario no existe</span>
+                <span id="contrasenia-incorrecta">-Contraseña incorrecta</span>
+                <span id="error-campovacio2">-Debe completar los campos</span>
+                <button type="submit" class="btn-iniciar" id="inicio-sesion-signin">Iniciar sesión</button>
+
+                <div class="linea-group">
+                    <div class="linea2"></div>
+                    <p class="or">O ingresar con:</p>
+                    <div class="linea2"></div>
+                </div>
+                <div class="social-login">
+                    <img src="juegos/facebook.png" alt="Facebook" class="social-icon" onclick="verConfirmacion()">
+                    <img src="juegos/google.png" alt="Google" class="social-icon" onclick="verConfirmacion()">
+                </div>
+            </form>
+        </div>
+
+        <div class="container3">
+            <div class="logo-form">
+                <img src="juegos/kiwi.png" alt="Kiwi Games">
+                <h1>Kiwi Games</h1>
+                <img src="juegos/kiwi90g.png" alt="Kiwi Games">
+            </div>
+            <div class="registro-form">
+    
+                <h2>¡Ingresaste correctamente!</h2>
+
+                <button class="btn-iniciar" id="a-jugar">A jugar</button>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/juego.js"></script>
+    <script src="js/carrusel.js"></script>   
     <script src="js/login.js"></script>
     <script src="js/script.js"></script>
 </body>

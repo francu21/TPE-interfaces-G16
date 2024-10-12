@@ -134,14 +134,21 @@ input[type="date"] {
 
 label {
     font-size: 0.9em;
-    color: #333;
+    color: black;
 }
 .recaptcha {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    justify-content: space-between;
+    padding-inline: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
 }
 
+.recaptcha img{
+    width: 36px;
+}
 .recaptcha label {
     margin-left: 10px;
     font-size: 0.85em;
@@ -231,6 +238,7 @@ label {
     color: red;
     display: none;
 }
+
 /*header */
 header {
     position: fixed;
@@ -268,22 +276,40 @@ header h1 {
         1px 1px 0 black;
 }
 
-/* Icono del menú */
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    display: block;
+/* Iconos del menú */
+header .derecha #icon {
+    width: 65px;
+    font-size: 36px;
+    padding-block: 8px;
 }
+header .izquierda #icon{
+    padding-block: 1px;
+}
+.izquierda, .derecha{
+    display: flex;
+}
+#icon{
+    font-size: 45px;
+    padding-inline: 10px;
+    text-align: center;
+}
+#icon:hover{
+    background-color: #A2D15C;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
 
 /* Menú desplegable */
 #menu {
     position: fixed;
     top: 0;
-    left: -250px; /* Oculto en el lateral izquierdo */
-    width: 250px;
-    height: 100%;
+    left: -200px; /* Oculto en el lateral izquierdo */
+    width: 200px;
     margin-top: 73px;
     border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-bottom-right-radius: 10px;
     background-color: #81A649;
     padding: 20px;
     transition: left 0.5s ease-in-out; /* Animación de desplazamiento */
@@ -292,11 +318,12 @@ header h1 {
 #perfil {
     position: fixed;
     top: 0;
-    right: -250px; /* Oculto en el lateral derecho */
-    width: 250px;
-    height: 100%;
+    right: -200px; /* Oculto en el lateral derecho */
+    width: 200px;
     margin-top: 73px;
     border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    border-bottom-left-radius: 10px;
     background-color: #81A649;
     padding: 20px;
     transition: right 0.5s ease-in-out; /* Animación de desplazamiento */
@@ -322,17 +349,16 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-.izquierda, .derecha{
+.carrito-mobile,.user-mobile{
+    display: none;
+}
+#usuario{
     display: flex;
+    align-items: center;
 }
-#icon{
-    font-size: 45px;
-    padding-inline: 10px;
-}
-#icon:hover{
-    background-color: #A2D15C;
-    cursor: pointer;
-    transition: 0.3s;
+#usuario i{
+    font-size: 32px;
+    margin: 5px;
 }
 /* recomendaciones */
 .recomendaciones .subtitulo{
@@ -340,7 +366,7 @@ nav ul li a:hover {
     text-align: center;
     font-size: 24px;
     color: white;
-    background-color: #5C432E;
+    background-color: #8C6746;
     text-shadow: 
         -1px -1px 0 black,  
         1px -1px 0 black,
@@ -349,8 +375,8 @@ nav ul li a:hover {
 }
 .card-grande{
     border: 1px solid white;
-    width: 50vw;
 }
+
 .card-grande .detalles {
     position: relative;
     display: flex;
@@ -426,7 +452,7 @@ nav ul li a:hover {
     transition: 2s;
 }
 .card-grande img{
-    width: 50vw;
+    width: calc(50vw - 2px);
     height: 300px;
     display: block;
 }
@@ -435,7 +461,7 @@ nav ul li a:hover {
     height: 40px;
     display: flex;
     justify-content: center;
-    background-color: #5C432E;
+    background-color: #8C6746;
     border-bottom: 2px solid black;
 }
 .circulo{
@@ -462,16 +488,21 @@ nav ul li a:hover {
 
 /* carrusel */
 .carrusel{
+    margin: 0 auto;
+    padding-inline: 10px;
+    width: 95vw;
     position: relative;
     overflow: hidden;
     height: 300px;
     background-color: #81A649;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    border: 2px solid black;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     margin-top: 70px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
+
 .carrusel-cards{
     display: flex;
     transition: 1s ;
@@ -480,6 +511,7 @@ nav ul li a:hover {
     position: absolute;
     text-align: center;
     width: 200px;
+    height: 40px;
     left: 50%;
     transform: translate(-50%,-38px);
     z-index: 100;
@@ -621,7 +653,222 @@ nav ul li a:hover {
 .card .boton-jugar:hover {
     background-color: #a3d944;
 }
+/* pagina juego */
+#juego{
+    background-color: #8C6746;
+    padding-top: 10px;
+    margin-top: 75px;
+    overflow: hidden;
+}
+#img-juego img{
+    display: block;
+    width: 80vw;
+    height: 80vh;
+    border: 1px solid white;
+}
+#img-juego{
+    margin: 0 auto;
+    width: 80vw;
+    height: 80vh;
+}
+#opciones{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height:50px ;
+    margin: 0 auto;
+    width: 80vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    overflow: hidden;
+}
+#opciones i{
+    display: flex;
+    font-size: 36px;
+    margin-inline: 7px;
+    transition: 0.5s;
+    color: white;
+    cursor: pointer;
+}
+#opciones i:hover,#opciones img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+#opciones img{
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    border: none;
+}
+#share{
+    display: flex;
+}
+.share-iconos{
+    position: relative;
+    display: flex;
+    left: -250px;
+    transition: 1s;
+}
+#img-juego:hover #opciones{
+    
+    transform: translateY(-50px);
+    transition: 0.5s;
+}
+#breadcrumb{
+    margin-left: 10vw;
+    display: flex;
+    justify-content:start;
+    margin-bottom: 20px;
+    color: white;
+}
+#breadcrumb img{
+    display: block;
+    margin-right: 5px;
+    height: 65px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
 
+#juego a{
+    position: absolute;
+    text-align: center;
+    height: 65px;
+    width: 65px;
+    font-size: 30px;
+    margin-inline: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+    color: white;
+}
+#juego a:hover{
+    background-color: #A67A53;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+#breadcrumb h2{
+    text-shadow: 
+    -1px -1px 0 black,  
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+#descripcion-juego{
+    background-color: #8C6746;
+    padding: 50px;
+    border-bottom: 2px solid black;
+}
+.instrucciones,.sobre-el-juego{
+    background-color: #81A649;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+.sobre-el-juego{
+    margin-top: 20px;
+}
+#como-jugar video{
+    border: 2px solid black;
+    border-radius: 20px;
+}
+#sobre-el-juego-img,#como-jugar{
+    text-align: center;
+    min-width: 330px;
+    max-width: 330px;
+    margin-left: 20px;
+    overflow: hidden;
+}
+#sobre-el-juego-img i{
+    font-size: 30px;
+    padding-inline: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+#sobre-el-juego-img i:hover{
+    background-color: #A2D15C;
+    transition: 0.5s;
+}
+.img-fichas{
+    display: flex;
+    margin-top: 20px;
+    transition: 1s;
+}
+.img-fichas img{
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    border-radius: 100%;
+    margin: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+#juego span{
+    font-style:italic;
+}
+#juego span:hover{
+    font-style:normal;
+    cursor: pointer;
+}
+
+#caja-comentarios{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    padding: 50px;
+    background-color: #8C6746;
+    margin: 50px auto;
+    width: 60vw;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+#caja-comentarios label{
+    font-size: 20px;
+    color: white;
+}
+#comentar{
+    display: flex;
+}
+#boton-comentar{
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #C6FF70;
+    padding-inline: 20px;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#boton-comentar:hover{
+    background-color: #A2D15C;
+    transform: scale(1.025);
+    transition: 0.5s;
+}
+
+#comentarios{
+    padding: 5px;
+    background-color: #75563B;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.comentario{
+    background-color: #5C432E;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin: 15px;
+}
+.comentario i{
+    font-size: 40px;
+    padding-inline: 10px;
+    text-align: center;
+}
 /* Estilo del footer */
 footer {
     background-color: #000000;
@@ -641,14 +888,17 @@ footer .social-media {
     margin-top: 10px;
 }
 
-footer .social-media a {
-    color: #34a853;
-    text-decoration: none;
-    margin: 0 10px;
+footer ul{
+    list-style-type: none;
 }
-
-footer .social-media a:hover {
-    text-decoration: underline;
+footer li{
+    font-style: italic;
+    cursor: pointer;
 }
-
+footer li:hover{
+    font-style: normal;
+}
+footer p{
+    margin: 10px;
+}
 

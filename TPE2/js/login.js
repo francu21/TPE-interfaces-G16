@@ -1,5 +1,5 @@
-//document.querySelector('.social-login').addEventListener('click', cerrarLogin);
-document.querySelector('#cerrar-sesion').addEventListener('click', verSignup);
+
+document.getElementById('cerrar-sesion').addEventListener('click', verSignup);
 document.querySelector('#inicio-sesion-signup').addEventListener('click', verLogin)
 document.querySelector('#back-signin').addEventListener('click', verSignup)
 document.querySelector('#a-jugar').addEventListener('click', cerrarLogin)
@@ -82,7 +82,8 @@ let registro = document.querySelector('.container1');
 let inicioSesion = document.querySelector('.container2');
 let confirmacion = document.querySelector('.container3');
 function verSignup() {
-    document.getElementById('perfil').style.right = '-250px';
+    document.getElementById('perfil').style.right = '-200px';
+    document.getElementById('menu').style.left = '-200px';
     login.style.display = 'flex'; 
     registro.style.transform = "translateY(0vh)";
     inicioSesion.style.transform = "translateY(100vh)";
