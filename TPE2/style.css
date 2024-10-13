@@ -238,7 +238,42 @@ label {
     color: red;
     display: none;
 }
-
+.boton-a-jugar button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #A2D15C;
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-decoration: none;
+    margin-top: 20px;
+}
+.boton-a-jugar i{
+    display: none;
+    transform: translateY(-46px);
+    text-align: center;
+    background-color: #81A649;
+    height: 45px;
+    width: 0px;
+    border-radius: 10px;
+    position: absolute;
+    font-size: 30px;
+}
+.boton-a-jugar:hover i{
+    display: block;
+    animation: completar 1s forwards;
+    cursor: pointer;
+}
+@keyframes completar {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 358px;
+    }
+  }
 /*header */
 header {
     position: fixed;
@@ -405,6 +440,21 @@ nav ul li a:hover {
     margin-inline: 10px;
     cursor: pointer;
 }
+.recomendaciones .bi-cart:hover, .carrusel .bi-cart:hover{
+    animation: rotacion 2s infinite;
+}
+
+@keyframes rotacion {
+    0%,100% {
+      transform:rotate(0);
+    }
+    33% {
+      transform: rotate(10deg);
+    }
+    66% {
+        transform: rotate(-10deg);
+    }
+  }
 .card-grande .precio {
     align-items: center;
     display: flex;
@@ -532,28 +582,29 @@ nav ul li a:hover {
     height: 64px;
     text-align: center;
     z-index: 100;
+    transition: 0.3s;
 }
 .boton-deslizar:hover{
     background-color: white;
     cursor: pointer;
+    animation: der-izq 3s infinite;
     transition: 0.3s;
 }
 .der{
     right: 0px;
-    transition: 0.3s;
-}
-.der:hover{
-    transform: scale(1.1) translateX(5px);
-    transition: 0.5s;
-}
-.izq{
-    transition: 0.3s;
-}
-.izq:hover{
-    transform: scale(1.1) translateX(-5px);
-    transition: 0.5s;
 }
 
+
+@keyframes der-izq {
+    
+    0%,100%{
+        transform: scale(1.1) translateX(-5px);
+    }
+    50%{
+        transform: scale(1.1)  translateX(5px);
+    }
+    
+  }
 
 .boton-deslizar i{
     font-size: 40px;
@@ -652,7 +703,16 @@ nav ul li a:hover {
 
 .card .boton-jugar:hover {
     background-color: #a3d944;
+    animation: rebote 1s infinite ;
 }
+@keyframes rebote {
+    0%,100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
 /* pagina juego */
 #juego{
     background-color: #8C6746;
@@ -796,6 +856,7 @@ nav ul li a:hover {
     background-color: #A2D15C;
     transition: 0.5s;
 }
+
 .img-fichas{
     display: flex;
     margin-top: 20px;
@@ -902,3 +963,92 @@ footer p{
     margin: 10px;
 }
 
+@media (max-width: 768px){
+    #menu{
+        transform: translateY(-1px);
+    }
+    .derecha{
+        display: none;
+    }
+    header h1{
+        font-size: 35px;
+        position:initial;
+        top: 0%; 
+        left: 0%; 
+        transform: translate(-0, 0%);
+        margin-right: 10px;
+         
+    }
+    .carrito-mobile, .user-mobile{
+        display: block;
+    }
+    .card-grande .detalles{
+        max-width:50vw;
+        padding: 5px;
+    }
+    .card-grande .detalles h3{
+        font-size: 16px;
+        max-width: 65%;
+    }
+    .card-grande .icons i {
+        font-size: 16px;
+        margin-inline: 2px;
+    }
+    .card-grande .precio span {
+        margin-inline: 2px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .card-grande .boton-jugar{
+        top: -100%; 
+        left: 50%; 
+        width: 100px;
+        transform: translate(-50%, -50%); 
+        padding: 10px;
+        font-size: 16px;
+    }
+    .card-grande img{
+        height: 200px;
+    }
+    .botones-puntos{
+        height: 30px;
+    }
+    .circulo{
+        width: 20px;
+        height: 20px;
+    }
+
+    .categoria{
+        font-size: 14px;
+        width: 150px;
+        height: 30px;
+        transform: translate(-50%,-27px);
+    }
+
+    .carrusel{
+        height: 250px;
+    }
+    .boton-deslizar{
+        margin: 20px;
+        width: 50px;
+        height: 50px;  
+    }
+    .boton-deslizar i{
+        font-size: 30px;
+    }
+    .card {
+        width: 200px;
+    }
+    .image img {
+        height: 126px;
+    }
+    .card .detalles {
+        padding: 5px;
+    }
+    .card .detalles .text {
+        max-height: 25px;
+    }
+    .card .boton-jugar {
+        padding: 5px 20px;
+    }
+}

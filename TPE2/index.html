@@ -32,6 +32,7 @@
                 <li><a href="#">Contacto</a></li>
                 <li><a href="#">Ayuda</a></li>
                 <li><a href="#" class="carrito-mobile">Carrito</a></li>
+                <li><a href="#" class="user-mobile">Perfil</a></li>
                 <li><a href="#" class="user-mobile" id="cerrar-sesion" onclick="verSignup()">cerrar sesion</a></li>
             </ul>
         </nav>
@@ -432,7 +433,7 @@
         </div>
     </footer>
 
-       <!-- Carga pagina -->
+       <!-- Carga pagina 
     <div class="carga-pagina">
         <div class="barra-carga">
             <h1 class="porcentaje"></h1>
@@ -440,6 +441,7 @@
             <div class="barra-porcentaje"></div>
         </div>
     </div>
+    -->
     
 
     <!-- login -->
@@ -553,8 +555,11 @@
             <div class="registro-form">
     
                 <h2>¡Ingresaste correctamente!</h2>
-
-                <button class="btn-iniciar" id="a-jugar">A jugar</button>
+                <div class="boton-a-jugar">
+                    <button id="a-jugar">A jugar</button>
+                    <i class="bi bi-joystick" onclick="cerrarLogin()"></i>
+                </div>
+                
 
             </div>
         </div>

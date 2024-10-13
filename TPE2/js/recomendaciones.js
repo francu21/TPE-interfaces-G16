@@ -7,7 +7,7 @@ const circ1 = document.querySelector('.circulo.uno');
 const circ2 = document.querySelector('.circulo.dos');
 const circ3 = document.querySelector('.circulo.tres');
 
-let contador = 1;
+let contador = 2;
 function cicloRecomendaciones() {
   switch(contador) {
     case 1:
@@ -25,7 +25,7 @@ function cicloRecomendaciones() {
     contador = 1;
   }
 }
-setInterval(cicloRecomendaciones, 5000);
+setInterval(cicloRecomendaciones, 10000);
 
 function recomendacion1(){
     recomendaciones.style.transform = "translate(0vw, 0)";

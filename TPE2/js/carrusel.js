@@ -38,4 +38,3 @@ function prevCard() {
     document.querySelector('.der').style.display = "block";
 }
 
-
