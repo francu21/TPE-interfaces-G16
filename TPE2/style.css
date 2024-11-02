@@ -963,6 +963,11 @@ footer p{
     margin: 10px;
 }
 
+#canvas{
+    width: 80vw;
+    height: 80vh;
+    background-color: white;
+}
 @media (max-width: 768px){
     #menu{
         transform: translateY(-1px);
