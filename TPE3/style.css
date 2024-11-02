@@ -1,0 +1,1102 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Saira', sans-serif;
+}
+body{
+    background-color: #A98D74;
+}
+/* carga */
+.carga-pagina{
+    position: absolute;
+    align-content: center;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #A98D74;
+    position: fixed; /* Fija la posición de la caja en la pantalla */
+    top:0;
+    left:0;
+    z-index: 9999; /* Asegura que esté por encima de otros elementos */
+}
+
+.barra-carga{
+    background-color:#81A649;
+    border: 2px solid black;
+    border-radius: 16px;
+    display: flex;
+    margin: auto;
+    align-content: center;
+    width: 500px;
+    height: 64px;
+}
+.barra-porcentaje{
+    background-color: #A2D15C;
+    border-right: 1px solid black;
+    border-radius: 16px;
+    position: absolute;
+    height: 60px;
+}
+.kiwi-carga{
+    max-width:60px;
+    position: absolute;
+    transform: translate(0,0);
+    z-index: 999;
+}
+.porcentaje{
+    z-index: 9999;
+    margin: auto;
+}
+/* login */
+#login{
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(128, 128, 128, 0.75);
+    position: fixed; /* Fija la posición de la caja en la pantalla */
+    top:0;
+    left:0;
+    z-index: 9999; /* Asegura que esté por encima de otros elementos */
+}
+.container1,.container2,.container3 {
+    position: absolute;
+    transform: translateY(100vh);
+    transition: 1.5s;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%; 
+
+}
+
+.container3 h2{
+    text-align: center;
+    margin: 20px ;
+}
+
+#back-signin{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+#back-signin:hover{
+    transform: scale(1.25);
+    transition: 0.5s;
+}
+.logo-form {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-form img{
+    height: 30px;
+}
+
+.logo-form h1 {
+    font-size: 1.8em;
+    color: #81A649;
+}
+.registro-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+label {
+    font-size: 0.9em;
+    color: black;
+}
+.recaptcha {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    padding-inline: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.recaptcha img{
+    width: 36px;
+}
+.recaptcha label {
+    margin-left: 10px;
+    font-size: 0.85em;
+}
+
+.btn-registrar {
+    background-color:#A2D15C;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.btn-registrar:hover {
+    background-color: #81A649;
+    transform: scale(1.025);
+    transition: 0.5s;
+}
+#inicio-sesion-signin{
+    margin-top: 0;
+}
+#contrasenia2{
+    margin-bottom: 20px;
+}
+.btn-iniciar {
+    display: block;
+    text-align: center;
+    background-color: #A2D15C;
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-decoration: none;
+    margin-top: 20px;
+}
+.btn-iniciar:hover{
+    background-color: #81A649;
+    transform: scale(1.025);
+    transition: 0.5s;
+}
+
+.login-options p {
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.or {
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.social-icon:hover{
+    transform: scale(1.25);
+    transition: 0.5s;
+}
+.linea-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.linea{
+    background-color: #000000;
+    height: 1px;
+    width: 25%;
+}
+.linea2{
+    background-color: #000000;
+    height: 1px;
+    width: 33%;
+}
+#error-contrasenia,#error-recaptcha, #error-campovacio,#error-coincidencia,#contrasenia-incorrecta,#error-campovacio2,#span-form-canvas{
+    color: red;
+    display: none;
+}
+.boton-a-jugar button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #A2D15C;
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-decoration: none;
+    margin-top: 20px;
+}
+.boton-a-jugar i{
+    display: none;
+    transform: translateY(-46px);
+    text-align: center;
+    background-color: #81A649;
+    height: 45px;
+    width: 0px;
+    border-radius: 10px;
+    position: absolute;
+    font-size: 30px;
+}
+.boton-a-jugar:hover i{
+    display: block;
+    animation: completar 1s forwards;
+    cursor: pointer;
+}
+@keyframes completar {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 358px;
+    }
+  }
+/*header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    background-color: #81A649; 
+    height: 75px;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    z-index: 1000;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header h1 {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    font-size: 48px;
+    text-shadow: 
+        -1px -1px 0 black,  
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
+}
+
+/* Iconos del menú */
+header .derecha #icon {
+    width: 65px;
+    font-size: 36px;
+    padding-block: 8px;
+}
+header .izquierda #icon{
+    padding-block: 1px;
+}
+.izquierda, .derecha{
+    display: flex;
+}
+#icon{
+    font-size: 45px;
+    padding-inline: 10px;
+    text-align: center;
+}
+#icon:hover{
+    background-color: #A2D15C;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+/* Menú desplegable */
+#menu {
+    position: fixed;
+    top: 0;
+    left: -200px; /* Oculto en el lateral izquierdo */
+    width: 200px;
+    margin-top: 73px;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    border-bottom-right-radius: 10px;
+    background-color: #81A649;
+    padding: 20px;
+    transition: left 0.5s ease-in-out; /* Animación de desplazamiento */
+    
+}
+#perfil {
+    position: fixed;
+    top: 0;
+    right: -200px; /* Oculto en el lateral derecho */
+    width: 200px;
+    margin-top: 73px;
+    border-left: 2px solid black;
+    border-bottom: 2px solid black;
+    border-bottom-left-radius: 10px;
+    background-color: #81A649;
+    padding: 20px;
+    transition: right 0.5s ease-in-out; /* Animación de desplazamiento */
+    
+}
+
+nav ul {
+    list-style: none;
+}
+
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #A2D15C;
+    color: #000000;
+    border-radius: 5px;
+}
+
+.carrito-mobile,.user-mobile{
+    display: none;
+}
+#usuario{
+    display: flex;
+    align-items: center;
+}
+#usuario i{
+    font-size: 32px;
+    margin: 5px;
+}
+/* recomendaciones */
+.recomendaciones .subtitulo{
+    height: 40px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+    background-color: #8C6746;
+    text-shadow: 
+        -1px -1px 0 black,  
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
+}
+.card-grande{
+    border: 1px solid white;
+}
+
+.card-grande .detalles {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid white;
+    background-color: black;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+}
+.recomendaciones{
+    margin-top: 75px;
+    overflow: hidden;
+}
+
+.card-grande .detalles  h3{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 24px;
+    max-width: 40%;
+}
+
+.card-grande .icons i {
+    font-size: 36px;
+    margin-inline: 10px;
+    cursor: pointer;
+}
+.recomendaciones .bi-cart:hover, .carrusel .bi-cart:hover{
+    animation: rotacion 2s infinite;
+}
+
+@keyframes rotacion {
+    0%,100% {
+      transform:rotate(0);
+    }
+    33% {
+      transform: rotate(10deg);
+    }
+    66% {
+        transform: rotate(-10deg);
+    }
+  }
+.card-grande .precio {
+    align-items: center;
+    display: flex;
+}
+
+.card-grande .precio span {
+    margin-inline: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.card-grande .precio .gratis{
+    color: greenyellow;
+}
+.card-grande .precio .comprado{
+    color: grey;
+    text-decoration:line-through;
+}
+
+.card-grande .boton-jugar {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    width: 150px;
+    transform: translate(-50%, -50%); 
+    padding: 10px;
+    background-color: greenyellow;
+    border-radius: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 24px;
+}
+.card-grande .boton-jugar.bloqueado{
+    background-color: grey;
+}
+.card-grande .boton-jugar.bloqueado:hover{
+    background-color: grey;
+    cursor:auto;
+}
+
+.card-grande .boton-jugar:hover {
+    background-color: #a3d944;
+}
+.cards-recomendaciones{
+    display: flex;
+    transition: 2s;
+}
+.card-grande img{
+    width: calc(50vw - 2px);
+    height: 300px;
+    display: block;
+}
+
+.botones-puntos{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    background-color: #8C6746;
+    border-bottom: 2px solid black;
+}
+.circulo{
+    width: 24px;
+    height: 24px;
+    margin: 5px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 100%;
+}
+.circulo.uno{
+    background-color:white;
+    
+}
+.circulo.uno,.circulo.dos,.circulo.tres{
+    cursor: pointer;
+    transition: 0.5s;
+}
+.circulo.uno:hover,.circulo.dos:hover,.circulo.tres:hover{
+    transform: scale(1.15);
+    transition: 0.5s;
+}
+
+
+/* carrusel */
+.carrusel{
+    margin: 0 auto;
+    padding-inline: 10px;
+    width: 95vw;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    background-color: #81A649;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.carrusel-cards{
+    display: flex;
+    transition: 1s ;
+}
+.categoria{
+    position: absolute;
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    left: 50%;
+    transform: translate(-50%,-38px);
+    z-index: 100;
+    background-color: #81A649;
+    border: 2px solid black;
+    border-bottom: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+/* cards */
+.boton-deslizar{
+    margin: 20px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid black;
+    border-radius: 100%;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+    z-index: 100;
+    transition: 0.3s;
+}
+.boton-deslizar:hover{
+    background-color: white;
+    cursor: pointer;
+    animation: der-izq 3s infinite;
+    transition: 0.3s;
+}
+.der{
+    right: 0px;
+}
+
+
+@keyframes der-izq {
+    
+    0%,100%{
+        transform: scale(1.1) translateX(-5px);
+    }
+    50%{
+        transform: scale(1.1)  translateX(5px);
+    }
+    
+  }
+
+.boton-deslizar i{
+    font-size: 40px;
+}
+.card {
+    width: 240px;
+    margin: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+    transition: 0.5s;
+}
+.card:hover{
+    transform: scale(1.1);
+    transition:0.75s;
+}
+
+.image img {
+    width: 100%;
+    height: 150px;
+    display: block;
+}
+
+.card .detalles {
+    border-top: 1px solid white;
+    background-color: black;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.card .detalles .text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 35px;
+}
+.card .detalles .text h3{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    width: 100%;
+}
+
+.card .detalles h2 {
+    font-size: 22px;
+}
+.icons{
+    display: flex;
+}
+
+.card .icons i {
+    font-size: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.bi-check-lg{
+    color: greenyellow;
+}
+.card .precio {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 10px;
+}
+
+.card .precio span {
+    font-size: 18px;
+    font-weight: bold;
+}
+.card .precio .gratis{
+    color: greenyellow;
+}
+.card .precio .comprado{
+    color: grey;
+    text-decoration:line-through;
+}
+
+.card .boton-jugar {
+    background-color: greenyellow;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid white;
+    cursor: pointer;
+    font-size: 16px;
+}
+.card .boton-jugar.bloqueado{
+    background-color: grey;
+}
+.card .boton-jugar.bloqueado:hover{
+    background-color: grey;
+    cursor:auto;
+}
+
+.card .boton-jugar:hover {
+    background-color: #a3d944;
+    animation: rebote 1s infinite ;
+}
+@keyframes rebote {
+    0%,100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+/* pagina juego */
+#juego{
+    background-color: #8C6746;
+    padding-top: 10px;
+    margin-top: 75px;
+    overflow: hidden;
+}
+#img-juego img{
+    display: block;
+    width: 80vw;
+    height: 80vh;
+    border: 1px solid white;
+}
+#img-juego{
+    margin: 0 auto;
+}
+#opciones{
+    display: none;
+    position: absolute;
+    bottom: 67px;
+    justify-content: space-between;
+    align-items: center;
+    height:50px ;
+    margin: 0 auto;
+    width: 1440px;
+    border-radius:0 0 20px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+    overflow: hidden;
+}
+#opciones i{
+    display: flex;
+    font-size: 36px;
+    margin-inline: 7px;
+    transition: 0.5s;
+    color: white;
+    cursor: pointer;
+}
+#opciones i:hover,#opciones img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+#opciones img{
+    width: 35px;
+    height: 35px;
+    margin-left: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    border: none;
+}
+#share{
+    display: flex;
+}
+.share-iconos{
+    position: relative;
+    display: flex;
+    left: -250px;
+    transition: 1s;
+}
+main:hover #opciones{
+    display: flex;
+}
+#breadcrumb{
+    margin-left: 10vw;
+    display: flex;
+    justify-content:start;
+    margin-bottom: 20px;
+    color: white;
+}
+#breadcrumb img{
+    display: block;
+    margin-right: 5px;
+    height: 65px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+
+#juego a{
+    position: absolute;
+    text-align: center;
+    height: 65px;
+    width: 65px;
+    font-size: 30px;
+    margin-inline: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+    color: white;
+}
+#juego a:hover{
+    background-color: #A67A53;
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+#breadcrumb h2{
+    text-shadow: 
+    -1px -1px 0 black,  
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+#descripcion-juego{
+    background-color: #8C6746;
+    padding: 50px;
+    border-bottom: 2px solid black;
+}
+.instrucciones,.sobre-el-juego{
+    background-color: #81A649;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+.sobre-el-juego{
+    margin-top: 20px;
+}
+#como-jugar video{
+    border: 2px solid black;
+    border-radius: 20px;
+}
+#sobre-el-juego-img,#como-jugar{
+    text-align: center;
+    min-width: 330px;
+    max-width: 330px;
+    margin-left: 20px;
+    overflow: hidden;
+}
+#sobre-el-juego-img i{
+    font-size: 30px;
+    padding-inline: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+#sobre-el-juego-img i:hover{
+    background-color: #A2D15C;
+    transition: 0.5s;
+}
+
+.img-fichas{
+    display: flex;
+    margin-top: 20px;
+    transition: 1s;
+}
+.img-fichas img{
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    border-radius: 100%;
+    margin: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+#juego span{
+    font-style:italic;
+}
+#juego span:hover{
+    font-style:normal;
+    cursor: pointer;
+}
+
+#caja-comentarios{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    padding: 50px;
+    background-color: #8C6746;
+    margin: 50px auto;
+    width: 60vw;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+#caja-comentarios label{
+    font-size: 20px;
+    color: white;
+}
+#comentar{
+    display: flex;
+}
+#boton-comentar{
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    margin-left: 10px;
+    background-color: #C6FF70;
+    padding-inline: 20px;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: 0.5s;
+}
+#boton-comentar:hover{
+    background-color: #A2D15C;
+    transform: scale(1.025);
+    transition: 0.5s;
+}
+
+#comentarios{
+    padding: 5px;
+    background-color: #75563B;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.comentario{
+    background-color: #5C432E;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin: 15px;
+}
+.comentario i{
+    font-size: 40px;
+    padding-inline: 10px;
+    text-align: center;
+}
+/* Estilo del footer */
+footer {
+    background-color: #000000;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+    margin-top: 100px;
+}
+
+footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer .social-media {
+    margin-top: 10px;
+}
+
+footer ul{
+    list-style-type: none;
+}
+footer li{
+    font-style: italic;
+    cursor: pointer;
+}
+footer li:hover{
+    font-style: normal;
+}
+footer p{
+    margin: 10px;
+}
+main{
+    display: flex;
+    justify-content: center;
+}
+#canvas{
+    border: 2px solid black;
+    border-radius: 20px;
+}
+.form-canvas{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 20px;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -42%);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+.form-canvas label{
+    font-size: 20px;
+}
+.jugador1,.jugador2{
+    margin-block: 20px;
+}
+
+.fichas-jugador{
+    display: flex;
+}
+.fichas-jugador img{
+    width: 65px;
+    height: 65px;
+    border: 1px solid black;
+    border-radius: 100%;
+    transition: 0.3s;
+}
+.fichas-jugador img:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+#select_tablero{
+    width: 100%;
+    margin-bottom: 20px;
+}
+#btn-iniciar-canvas{
+    padding-inline: 20px;
+    font-size: 20px;
+}
+@media (max-width: 768px){
+    #menu{
+        transform: translateY(-1px);
+    }
+    .derecha{
+        display: none;
+    }
+    header h1{
+        font-size: 35px;
+        position:initial;
+        top: 0%; 
+        left: 0%; 
+        transform: translate(-0, 0%);
+        margin-right: 10px;
+         
+    }
+    .carrito-mobile, .user-mobile{
+        display: block;
+    }
+    .card-grande .detalles{
+        max-width:50vw;
+        padding: 5px;
+    }
+    .card-grande .detalles h3{
+        font-size: 16px;
+        max-width: 65%;
+    }
+    .card-grande .icons i {
+        font-size: 16px;
+        margin-inline: 2px;
+    }
+    .card-grande .precio span {
+        margin-inline: 2px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .card-grande .boton-jugar{
+        top: -100%; 
+        left: 50%; 
+        width: 100px;
+        transform: translate(-50%, -50%); 
+        padding: 10px;
+        font-size: 16px;
+    }
+    .card-grande img{
+        height: 200px;
+    }
+    .botones-puntos{
+        height: 30px;
+    }
+    .circulo{
+        width: 20px;
+        height: 20px;
+    }
+
+    .categoria{
+        font-size: 14px;
+        width: 150px;
+        height: 30px;
+        transform: translate(-50%,-27px);
+    }
+
+    .carrusel{
+        height: 250px;
+    }
+    .boton-deslizar{
+        margin: 20px;
+        width: 50px;
+        height: 50px;  
+    }
+    .boton-deslizar i{
+        font-size: 30px;
+    }
+    .card {
+        width: 200px;
+    }
+    .image img {
+        height: 126px;
+    }
+    .card .detalles {
+        padding: 5px;
+    }
+    .card .detalles .text {
+        max-height: 25px;
+    }
+    .card .boton-jugar {
+        padding: 5px 20px;
+    }
+    .barra-carga{
+        width: 300px;
+    }
+}
