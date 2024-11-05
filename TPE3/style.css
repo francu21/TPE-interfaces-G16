@@ -1006,15 +1006,26 @@ main img{
     display: flex;
 }
 .fichas-jugador img{
+    margin: 10px;
     width: 65px;
     height: 65px;
     border: 1px solid black;
     border-radius: 100%;
     transition: 0.3s;
 }
-.fichas-jugador img:hover{
-    transform: scale(1.1);
-    transition: 0.3s;
+
+input[type="radio"] {
+    display: none;
+}
+
+.imagen-selector input[type="radio"]:checked + img {
+    transform: scale(1.1); 
+    border: 2px solid red; 
+    border-radius: 50%; 
+}
+
+.imagen-selector img {
+    transition: transform 0.2s ease, border 0.2s ease;
 }
 #select_tablero{
     width: 100%;
