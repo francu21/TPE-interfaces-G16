@@ -57,7 +57,7 @@ body{
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(128, 128, 128, 0.75);
+    background-color: rgba(0, 0, 0, 0.80);
     position: fixed; /* Fija la posición de la caja en la pantalla */
     top:0;
     left:0;
@@ -89,7 +89,14 @@ body{
     cursor: pointer;
     font-size: 20px;
 }
-#back-signin:hover{
+#close-login{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 15px;
+}
+#back-signin:hover, #close-login:hover{
     transform: scale(1.25);
     transition: 0.5s;
 }
@@ -317,6 +324,9 @@ header .derecha #icon {
     font-size: 36px;
     padding-block: 8px;
 }
+header .derecha{
+    margin-right: 10px;
+}
 header .izquierda #icon{
     padding-block: 1px;
 }
@@ -396,6 +406,7 @@ nav ul li a:hover {
     margin: 5px;
 }
 /* recomendaciones */
+
 .recomendaciones .subtitulo{
     height: 40px;
     text-align: center;
@@ -410,6 +421,7 @@ nav ul li a:hover {
 }
 .card-grande{
     border: 1px solid white;
+    margin-right: 1vw;
 }
 
 .card-grande .detalles {
@@ -502,7 +514,7 @@ nav ul li a:hover {
     transition: 2s;
 }
 .card-grande img{
-    width: calc(50vw - 2px);
+    width: calc(49vw - 1px );
     height: 300px;
     display: block;
 }
@@ -800,7 +812,7 @@ main:hover #opciones{
     color: white;
 }
 #juego a:hover{
-    background-color: #A67A53;
+    color: #000;
     transform: scale(1.1);
     transition: 0.5s;
 }
@@ -961,7 +973,12 @@ footer p{
 }
 main{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+main img{
+    width: 150px;
+    height: 600px;
 }
 #canvas{
     border: 2px solid black;
